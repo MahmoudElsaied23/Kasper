@@ -85,7 +85,7 @@ body {
 
 header {
   height: 100vh;
-  background-image: url("/Files/Images/FB_IMG_1698160732674.jpg");
+  background-image: url("Files/Images/FB_IMG_1698160732674.jpg");
   background-size: cover;
   position: relative;
 }
@@ -212,7 +212,7 @@ header span i {
 }
 
 .services .serv-foot {
-  background: url("/Files/Images/gallery /owl.jpeg");
+  background: url("Files/Images/gallery /owl.jpeg");
   background-size: cover;
   height: 600px;
   margin-top: 50px;
@@ -378,7 +378,7 @@ header span i {
 }
 
 .about .float {
-  background: url("/Files/Images/images (3).jpeg");
+  background: url("Files/Images/images (3).jpeg");
   background-size: cover;
   margin-bottom: 70px;
   padding-block: 100px;
@@ -527,7 +527,7 @@ header span i {
 }
 
 .about .about-foot {
-  background: url("/Files/Images/images (4).jpeg");
+  background: url("Files/Images/images (4).jpeg");
   background-size: cover;
   text-align: center;
   margin-top: 85px;
@@ -632,7 +632,7 @@ header span i {
 }
 
 .pricing .pricing-foot {
-  background: url("/Files/Images/beautiful-shining-stars-night-sky_181624-622.jpg");
+  background: url("Files/Images/beautiful-shining-stars-night-sky_181624-622.jpg");
   background-size: cover;
   padding-block: 120px;
   color: white;
@@ -742,7 +742,7 @@ header span i {
 
 
 footer {
-  background: url("/Files/Images/planet.jpg");
+  background: url("Files/Images/planet.jpg");
   background-size: cover;
 }
 
