@@ -1,0 +1,876 @@
+:root {
+  --mainColor: #19c8fa;
+  --secondaryColor: rgb(15 116 143 / 70%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.head {
+  text-align: center;
+  padding: 80px;
+}
+.head h1 {
+  font-weight: 400;
+  font-size: 40px;
+  padding: 15px;
+  color: #000000CF;
+  position: relative;
+}
+ .head h1::before,
+ .head h1::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.head h1::before {
+  width: 120px;
+  height: 2px;
+  background: #000000CF;
+  bottom: 0;
+}
+.head h1::after {
+  padding: 7px;
+  background: white;
+  border: solid 2px #000000CF;
+  border-radius: 50%;
+  bottom: -7px;
+}
+.head p {
+  color: gray;
+  margin-top: 50px; 
+}
+
+.overlay {
+  backdrop-filter: brightness(.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8;
+}
+
+header {
+  height: 100vh;
+  background-image: url("/Files/Images/FB_IMG_1698160732674.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid white;
+  padding: 25px 0 !important;
+  position: relative;
+  z-index: 4;
+}
+
+nav div {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: 15%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 32.7px 10px;
+  font-size: 14px;
+  transition: 300ms;
+}
+
+nav ul li:first-of-type a,
+nav ul li a:hover {
+  border-bottom: solid;
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+nav i[class *= bars] {
+ display: none;
+ color: white !important;
+}
+
+nav i[class *= magni] {
+  color: white;
+  border-left: solid 1.5px;
+  padding: 17px;
+}
+
+header .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 50px;
+  background: var(--secondaryColor);
+  border-radius: 0 30px;
+  border: double 2px;
+  width: 58%;
+  z-index: 3;
+}
+
+header .text h1 {
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: var(--mainColor);
+}
+
+header span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 95vh;
+  color: white;
+  margin: 0 10px;
+  backdrop-filter: brightness(.5);
+}
+
+header span i {
+  z-index: 2;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translatex(-50%);
+  list-style: none;
+  display: flex;
+}
+
+ .bullets li {
+   border-radius: 50%;
+   border: solid white;
+   padding: 15px;
+   margin-right: 10px;
+   z-index: 3;
+}
+
+ .bullets li:nth-child(2) {
+  background: var(--mainColor);
+  border-color: var(--mainColor) !important;
+}
+
+
+
+.services .serv {
+  display: flex;
+}
+
+.services .serv h3 {
+  color: var(--mainColor);
+}
+
+.services .serv p {
+  color: gray;
+  padding-block: 20px 60px;
+}
+
+.services .serv i {
+  padding: 0 30px 30px;
+}
+
+.services .serv-foot {
+  background: url("/Files/Images/gallery /owl.jpeg");
+  background-size: cover;
+  height: 600px;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .box {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  padding: 50px;
+  background: var(--secondaryColor);
+}
+
+.services .box ul {
+  list-style: none;
+  color: white;
+}
+
+.services .box ul h1 {
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+
+.services .box ul li {
+  padding: 10px;
+}
+
+.services .box ul li::before {
+  content: "\f005";
+  font-family: "font awesome 5 free";
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.services .serv-foot img {
+  position: relative;
+  z-index: 2;
+  top: 230px;
+  left: 10%;
+}
+
+
+
+.portfolio ul {
+  list-style: none;
+  width: 300px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.portfolio ul li {
+  padding: 5px 10px;
+}
+
+.portfolio ul li:first-child,
+.portfolio ul li:hover {
+  background: var(--mainColor);
+  color: white;
+  font-weight: bold;
+}
+
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-column-gap: 3px;
+}
+
+.portfolio .gallery figure {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -5px;
+}
+
+.portfolio .gallery figure img {
+  width: 100%;
+  height: 300px;
+  transition: 300ms;
+}
+
+.portfolio figure figcaption {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  padding: 10px 20px;
+  background: white;
+  transition: 300ms;
+}
+
+.portfolio figure:hover figcaption {
+  bottom: 0px;
+}
+
+.portfolio figure:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio figcaption span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+.portfolio > button {
+  width: fit-content;
+  padding: 10px 20px;
+  color: white;
+  margin-block: 30px 150px;
+  background: var(--mainColor);
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.portfolio .port-foot {
+  position: relative;
+}
+
+.portfolio .port-foot video {
+  width: 100%;
+}
+
+.portfolio .port-foot .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  background: var(--secondaryColor);
+}
+
+.portfolio .port-foot .text h1 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.portfolio .port-foot .text button {
+  background: black;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  margin-top: 30px;
+}
+
+
+
+.about .container:first-child {
+  overflow: hidden;
+}
+
+.about .container:first-child img {
+  width: 100%;
+  position: relative;
+  top: 120px;
+  margin-top: -120px;
+}
+
+.about .float {
+  background: url("/Files/Images/images (3).jpeg");
+  background-size: cover;
+  margin-bottom: 70px;
+  padding-block: 100px;
+  position: relative;
+}
+
+.about .float .box {
+  background: var(--secondaryColor);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: space-evenly;
+  gap: 100px;
+  margin-inline: 10%;
+  padding-block: 50px;
+  position: relative;
+}
+
+.about .box .item {
+  color: white;
+  text-align: center;
+}
+
+.about .item i {
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+
+.about .item h1 {
+  font-size: 50px;
+}
+
+.about .test {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.about .center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about .center h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.about .center p {
+  color: gray;
+}
+
+.about .user {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.about .user img {
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: solid 1.5px maroon;
+  margin-right: 50px;
+}
+
+.about .user .text {
+  border-bottom: solid gray;
+}
+
+.about .user p {
+  color: gray;
+  text-align: right;
+}
+
+.about .bullets {
+  bottom: -70px;
+}
+
+.about .bullets li {
+  border-color: #78797C;
+  padding: 10px;
+}
+
+.about .prog progress {
+  width: 100%;
+  height: 60px;
+  accent-color: var(--mainColor);
+  position: relative;
+}
+
+.about .prog progress::before {
+  padding-inline: 5px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  position: absolute;
+  top: -40px;
+}
+
+.about .prog progress::after {
+  content: "";
+  border: solid 9px;
+  border-color: black transparent transparent;
+  position: absolute;
+  top: -8px;
+}
+
+.about progress[value = "90"]::before {
+  content: "90%";
+  left: 86.7%;
+}
+.about progress[value = "90"]::after {
+  left: 88.7%;
+}
+
+.about progress[value = "80"]::before {
+  content: "80%";
+  left: 76.7%;
+}
+.about progress[value = "80"]::after {
+  left: 78.7%;
+}
+
+.about progress[value = "65"]::before {
+  content: "65%";
+  left: 61.7%;
+}
+.about progress[value = "65"]::after {
+  left: 63.7%;
+}
+
+.about progress[value = "55"]::before {
+  content: "55%";
+  left: 51.7%;
+}
+.about progress[value = "55"]::after {
+  left: 53.7%;
+}
+
+.about .prog p {
+  font-size: 18px;
+}
+
+.about .about-foot {
+  background: url("/Files/Images/images (4).jpeg");
+  background-size: cover;
+  text-align: center;
+  margin-top: 85px;
+  padding-block: 150px;
+}
+
+.about .about-foot p {
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  line-height: 1.2;
+   padding-bottom: 20px;
+}
+
+.about .about-foot b {
+  color: var(--mainColor);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.pricing .plans .items {
+  background: #F7F7F7;
+  text-align: center;
+  padding: 50px 30px;
+  border: solid var(--mainColor);
+}
+
+.pricing .items :where(.price, .feats) {
+  padding: 20px;
+  border-bottom: solid var(--mainColor);
+}
+
+.pricing .items h3 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background: #3BD8FF;
+  color: white;
+  width: 200px;
+  padding-block: 5px; 
+  margin: auto;
+  border: solid .6px gray;
+  border-radius: 5px;
+}
+
+.pricing .items .price span {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.pricing .items .price sup {
+  font-size: 25px;
+  position: relative;
+  top: -40px;
+}
+
+.pricing .items .price sub {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pricing .items .feats p {
+  padding: 10px;
+  width: 160px;
+  margin: auto;
+}
+.pricing .feats p:not(:last-child) {
+  border-bottom: solid .6px gray;
+}
+
+.pricing button {
+  border: none;
+  background: #3BD8FF;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.pricing .items button {
+  margin-top: 30px;
+  padding: 12px;
+}
+
+.pricing .contact {
+  text-align: center;
+  padding-block: 40px 80px;
+}
+
+.pricing .contact p {
+  font-size: 22px;
+  padding: 15px;
+}
+
+.pricing .contact button {
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+.pricing .pricing-foot {
+  background: url("/Files/Images/beautiful-shining-stars-night-sky_181624-622.jpg");
+  background-size: cover;
+  padding-block: 120px;
+  color: white;
+  position: relative;
+}
+
+.pricing .pricing-foot form {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 40px;
+  width: 500px;
+  max-width: 100%;
+  background: transparent;
+  border: solid white;
+  position: relative;
+}
+
+.pricing-foot form i {
+  margin-inline: 20px;
+}
+
+.pricing-foot form input[type = email] {
+  flex-grow: 1;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding-block: 20px;
+  caret-color: var(--mainColor);
+}
+
+.pricing-foot input[type = submit] {
+  padding: 20px;
+  border: none;
+  background: var(--mainColor);
+  color: white;
+  position: absolute;
+  right: 0;
+}
+
+.pricing-foot form input::placeholder {
+  color: white;
+}
+
+
+
+.contus .touch {
+  display: flex;
+  flex-flow: wrap row-reverse;
+}
+
+.contus .details {
+  padding-inline: 40px;
+}
+
+.touch .details h3 {
+  font-weight: 400;
+  margin-block: 50px 20px;
+}
+
+.touch .details h3:first-of-type {
+  margin-top: -7px;
+}
+
+.touch .details p {
+  color: gray;
+}
+
+.touch .details h3:last-of-type ~ p {
+  font-style: italic;
+}
+
+.touch form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.touch form *:not(:last-child) {
+  padding: 15px;
+  border: solid gray;
+  outline: none;
+}
+
+.touch form .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.touch .buttons input[type = submit],
+.touch .buttons input[type = reset] {
+  width: 150px;
+  background: var(--mainColor);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 17px;
+  font-weight: bold;
+}
+
+.touch .buttons input[type = reset] {
+  background: #EB3B3B;
+}
+
+
+
+footer {
+  background: url("/Files/Images/planet.jpg");
+  background-size: cover;
+}
+
+footer .social {
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding-block: 50px;
+  backdrop-filter: brightness(.5);
+}
+
+footer .social img {
+  width: 170px;
+}
+
+footer .social h2 {
+  font-weight: 400;
+  padding: 20px;
+  margin: 30px auto 0;
+  width: fit-content;
+  border-bottom: solid white;
+}
+
+footer .social i {
+  margin: 40px 15px 80px;
+}
+
+footer .social p {
+  font-size: 18px;
+}
+
+footer .social p span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .head {
+    padding-inline: 0;
+  }
+  
+  nav {
+    width: 90%;
+  }
+  nav ul {
+    display: none;
+    width: 105%;
+    position: absolute;
+    left: -57px;
+    top: 90px;
+    background: #000000C2;
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 10px;
+  }
+  nav ul li a {
+    padding: 10px; 
+    padding-right: 85vw;
+  }
+  nav ul li a:hover {
+    margin-left: 10px;
+  }
+  nav i[class *= bars] {
+    display: unset;
+    margin-left: 90px;
+  } 
+  nav div:hover ul {
+    display: flex; 
+    flex-direction: column;
+  }
+  header .text {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  header span {
+    display: none;
+  }
+  .bullets li {
+    padding: 8px;
+  }
+  
+
+  .services .serv {
+    text-align: center;
+    flex-direction: column;
+  }
+  .services .serv-foot img {
+    visibility: hidden;
+  }
+  
+  
+  .portfolio .gallery {
+    display: unset;
+  }
+  
+  
+  .about .container:first-child img {
+    top: 60px;
+    margin-top: -60px;
+  }
+  .about .float .box {
+    margin-inline: 5%; 
+  }
+  .about .float {
+    padding-block: 50px;
+  }
+  .about .user {
+    flex-direction: column;
+    text-align: center;
+  } 
+  .about .user img {
+    margin: auto;
+  }
+  .about .prog progress::before {
+    margin-left: -12.5px;
+  }
+  .about .prog progress::after {
+    margin-left: -5px;
+  }
+  
+  
+  .contus .touch .details {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+}
