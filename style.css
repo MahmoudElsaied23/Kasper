@@ -480,6 +480,7 @@ header span i {
   border-radius: 3px;
   position: absolute;
   top: -40px;
+  transform: translatex(-50%);
 }
 
 .about .prog progress::after {
@@ -488,38 +489,39 @@ header span i {
   border-color: black transparent transparent;
   position: absolute;
   top: -8px;
+   transform: translatex(-50%);
 }
 
 .about progress[value = "90"]::before {
   content: "90%";
-  left: 86.7%;
+  left: 90%;
 }
 .about progress[value = "90"]::after {
-  left: 88.7%;
+  left: 90%;
 }
 
 .about progress[value = "80"]::before {
   content: "80%";
-  left: 76.7%;
+  left: 80%;
 }
 .about progress[value = "80"]::after {
-  left: 78.7%;
+  left: 80%;
 }
 
 .about progress[value = "65"]::before {
   content: "65%";
-  left: 61.7%;
+  left: 65%;
 }
 .about progress[value = "65"]::after {
-  left: 63.7%;
+  left: 65%;
 }
 
 .about progress[value = "55"]::before {
   content: "55%";
-  left: 51.7%;
+  left: 55%;
 }
 .about progress[value = "55"]::after {
-  left: 53.7%;
+  left: 55%;
 }
 
 .about .prog p {
